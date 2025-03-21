@@ -66,3 +66,16 @@ console.log(Object.entries(tinderuser))// return array
 //check key exist or not in obejcet
 console.log(tinderuser.hasOwnProperty('Name'))
 
+
+//object destructuring
+
+const course={
+    CourseName:"physics",
+    coursefee:500,
+    courseInstructor:"chandan"
+}
+
+//fetch couuserinstuctor
+const {courseInstructor:instructor}=course
+//console.log(courseInstructor)
+console.log(instructor)
