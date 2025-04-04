@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asysnc Poject1</title>
+</head>
+<body>
+    <h1>Java Script Aynsc with Chandan</h1>
+    <button id="stopButton"> Stop</button>
+    
+</body>
+<script>
+
+    const chnageHeader=function()
+    {
+    
+        document.querySelector('h1').innerText='javscript with Stop watch'
+       
+
+    }
+   const chnageme= setTimeout(chnageHeader,2000)
+
+    const btn=document.querySelector('#stopButton')
+    console.log(btn)
+    btn.addEventListener('click',function()
+    {
+        clearInterval(chnageme)
+        console.log("stopped")
+    },false
+)
+</script>
+
+
+</html>

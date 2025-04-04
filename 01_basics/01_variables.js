@@ -7,3 +7,6 @@
 let accountName="Arjun";
 
 console.table([accountName])
+const chandan="test"
+
+console.log(chandan)
