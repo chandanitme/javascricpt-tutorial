@@ -8,10 +8,37 @@
 <body>
     <h1>Java Script Aynsc with Chandan</h1>
     <button id="startBtn"> Start</button>
+    <button id="stopbtn"> stop</button>
     
 </body>
 <script>
 
+let pingvariable=null;
+    const sayhello=function(str)
+    {
+        console.log(`${str}`,Date.now)
+    }
+
+    const ping=function()
+   {
+    pingvariable=setInterval(sayhello,1000,"hi")
+ 
+
+   }
+     const stopping=function()
+     {
+        clearInterval(pingvariable);
+
+     }
+
+    document.querySelector('#startBtn').addEventListener('click',ping
+    ,false)
+
+    document.querySelector('#stopbtn').addEventListener('click',function()
+    {
+        console.log("clear interval")
+        stopping()
+    },false)
 </script>
 
 
