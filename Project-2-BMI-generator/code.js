@@ -24,7 +24,7 @@ obform.addEventListener('submit',function(e)
     }
         else
     {
-const bmivalue=(weight/((height*height)/10000)).toFixed(2)
+const bmivalue=(weight / ((height*height) / 10000)).toFixed(2)
 divresult.innerHTML=`<span> ${bmivalue}</span>`
     }
        
