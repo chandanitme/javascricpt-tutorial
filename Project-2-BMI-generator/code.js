@@ -7,10 +7,10 @@ obform.addEventListener('submit',function(e)
 
     //redult div
     const divresult=document.querySelector('#results')
-    const weight=parseInt(document.querySelector('#bdheight').value)
+    const weight=parseInt(document.querySelector('#bdweight').value)
     console.log(weight)
 
-    const height=parseInt(document.querySelector('#bdweight').value)
+    const height=parseInt(document.querySelector('#bdheight').value)
     console.log(height)
 
 
@@ -25,7 +25,27 @@ obform.addEventListener('submit',function(e)
         else
     {
 const bmivalue=(weight / ((height*height) / 10000)).toFixed(2)
-divresult.innerHTML=`<span> ${bmivalue}</span>`
+
+
+
+divresult.innerHTML=getmessage(bmivalue)
     }
        
 })
+
+ function getmessage(bmi )
+{
+    if(bmi<18.6)
+    {
+return `<h1> yourare under weight ${bmi}</h1>`
+    }
+        else if(bmi>=18.6 && bmi<=29.6)
+        {
+return `<h1> yourare normal weight ${bmi}</h1>`
+        }
+        else
+        {
+return `<h1>yourare over weight ${bmi}</h1>`
+        }
+
+}
